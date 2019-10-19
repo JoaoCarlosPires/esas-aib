@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programa em JavaScript
+</title>
+</head>
+<body>
+<script type="text/javascript">
+var a=0;
+var b=0;
+var c=0;
+var x=0;
+var y=0;
+var z=0;
+var r=0;
+var s=0;
+r = parseInt(prompt ("Pretende estudar os lados ou os ângulos?","Digite 1 para estudar lados e 2 para estudar ângulos"));
+if (r==1) {
+a = parseInt(prompt ("Qual o comprimento do lado a?","Digite o comprimento de a"));
+b = parseInt(prompt ("Qual o comprimento do lado b?","Digite o comprimento de b"));
+c = parseInt(prompt ("Qual o comprimento do lado c?","Digite o comprimento de c"));
+if (a==b && a==c) {
+document.write("O triângulo é equilátero.");
+} else {
+if (a==b || a==c || b==c) {
+document.write("O triângulo é isósceles.");
+} else {
+document.write("O triângulo é escaleno.");
+}
+}  
+} else {
+x = parseInt(prompt ("Qual o primeiro ângulo?","Digite o primeiro ângulo"));
+y = parseInt(prompt ("Qual o segundo ângulo?","Digite o segundo ângulo"));
+s = parseInt(x) + parseInt(y);
+if (s>=180) {
+document.write("Triângulo impossível.");
+} else {
+z = 180 - parseInt(s);
+if (x==90 || y==90 || z==90) {
+document.write("O triângulo é retângulo.");
+} else {
+    if (x<90 && y<90 && z<90) {
+        document. write("O tirângulo é acutângulo.")
+    } else {
+        document.write("O triângulo é obtusângulo.")
+    }
+}
+}
+}
+</script>
+</body>
+</html>

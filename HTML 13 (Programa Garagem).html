@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programa em JAVASCRIPT
+</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+// inicialização
+
+var cars = [];
+var matri = [];
+var search="";
+var a = 0;
+
+// registo dos carros
+
+for (i=1; i<=5; i++) {
+cars[i] = prompt("Qual a marca do " + i + "º carro?","Digite a marca do " + i + "º carro.")
+matri[i]= prompt("Qual a " + i + "ª matrícula?","Digite a " + i + "ª matrícula.");
+}
+
+// verificação da presença do carro pela matrícula
+
+search = prompt("Qual a matrícula do seu carro?","Digite a matrícula do seu carro.");
+
+for (k=1; k<=5; k++) {
+if (search == matri[k]) {
+ a = 1
+ document.write("A marca do seu carro é " + cars[k]);
+}
+}
+if (a != 1) {
+document.write("Não existe.");
+}
+</script>
+</body>
+</html>

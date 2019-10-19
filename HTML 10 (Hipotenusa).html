@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programa Hipotenusa
+</title>
+</head>
+<body>
+<script type="text/javascript">
+
+// inicialização
+
+var h=0;
+var ca=0;
+var cb=0;
+
+// leitura dos catetos e verificação de validade
+
+while (ca<=0 || cb<=0) {
+    ca = parseInt(prompt("Qual o comprimento do cateto a?","Digite o comprimento do cateto a"));
+    cb = parseInt(prompt("Qual o comprimento do cateto b?","Digite o comprimento do cateto b"));
+}
+
+// cálculo da hipotenusa
+
+h = Math.sqrt((ca*ca) + (cb*cb));
+
+// visualização dos resultados
+
+document.write("A hipotenusa é " + h);
+
+</script>
+</body>
+</html>

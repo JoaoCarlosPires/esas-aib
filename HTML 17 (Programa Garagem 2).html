@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+// inicialização
+
+var pesquisa="";
+var marcas=[];
+var a=0;
+var posição=0;
+
+// leitura e armazenamento das marcas
+
+for (i=1 ; i<=5; i++) {
+marcas[i] = prompt("Qual a marca do carro?","Digite a marca do carro.");
+}
+
+// leitura da marca a procurar
+
+pesquisa = prompt("Qual a marca que pretende pesquisar?","Digite a marca.");
+
+// pesquisa da marca
+
+for (k=1; k<=5; k++) {
+if (marcas[k] == pesquisa) {
+a = 1
+posição = k
+} 
+}
+
+// visualização dos resultados
+
+if (a==1) {
+document.write("Existe a marca " + pesquisa + " na " + posição + "ª posição");
+} else {
+document.write("Não existe a marca " + pesquisa);
+}
+
+</script>
+</body>
+</html>

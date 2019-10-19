@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programa em JAVASCRIPT
+</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+// inicialização
+
+var n=0;
+var fatorial=1;
+
+// pergunta
+
+n = prompt("Qual o número que pretende estudar o fatorial?","Digite o número.");
+
+// verificação validade, cálculo e resultado
+
+if (n<0) {
+document.write("O número que pretende estudar não admite fatorial.");
+} else {
+	for (i=1 ; i<=n ; i++) {
+		fatorial = fatorial * i
+	}
+	document.write(n + "! = " + fatorial);
+}
+
+</script>
+</body>
+</html>

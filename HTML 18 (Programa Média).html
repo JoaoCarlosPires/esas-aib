@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var banda=0;
+var disciplinas=0;
+var soma=0;
+var m=0;
+var nota=0;
+var i=1;
+
+while (banda==0){
+	disciplinas = prompt("Quantas disciplinas tem?","Digite o número de disciplinas.");
+	if (disciplinas>=1){
+		banda = 1
+	}
+}
+
+while (i<=disciplinas) {
+	nota = prompt("Qual a " + i + "ª nota?","Digite a " + i + "ª nota.");
+	if (nota>=0 && nota <=20) {
+		soma += parseInt(nota)
+		i++
+	}
+}
+
+m = soma / disciplinas;
+
+document.write("A média é: " + m);
+</script>
+</body>
+</html>

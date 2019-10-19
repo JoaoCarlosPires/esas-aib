@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programa Análise Temperaturas
+</title>
+</head>
+<body>
+<script type="text/javascript">
+
+// inicialização
+
+var temp=[];
+var tempmax=0;
+var tempmin=0;
+var banda=0;
+var m=0;
+var soma=0;
+var escolha=0;
+var pos=0;
+var neg=0;
+
+// leitura da temperatura
+
+for (i = 1; i <= 10; i++) {
+    temp[i] = parseInt(prompt("Qual a temperatura " + i + "?","Digite a temperatura " + i));
+    soma += temp[i]
+	if (temp[i] > 0) {
+	pos += 1
+	}
+	if (temp[i] < 0) {
+	neg += 1
+	}
+}
+
+// verificação temperatua desejada
+
+escolha = prompt("Qual a temperatura que pretende verificar se foi atingida?","Digite a temperatura.");
+
+for (s = 1; s <= 10; s++) {
+	if (escolha == temp[s]) {
+	banda += 1
+	}
+}
+
+// cálculo da temperatura média
+
+m = soma / 10
+
+// cálculo da temperatura máxima e mínima
+
+tempmax = temp[1]
+tempmin = temp[1]
+
+for (k = 2; k <= 10; k++) {
+    if (temp[k] > tempmax) {
+        tempmax = temp[k]
+    }
+    if (temp[k] < tempmin) {
+        tempmin = temp[k]
+    }
+}
+
+// visualização dos resultados
+
+if (banda >= 1) {
+    document.write("Atingiu a temperatura pretendida " + banda + " vezes."+"<br>");
+} else {
+    document.write("Não atingiu a temperatura pretendida."+"<br>");
+}
+document.write("Temperatura média: " + m + " ºC."+"<br>");
+document.write("Temperatura máxima: " + tempmax+"<br>");
+document.write("Temperatura mínima: " + tempmin+"<br>");
+document.write("Temperaturas positivas: " + pos+"<br>");
+document.write("Temperaturas negativas: " + neg+"<br>");
+
+</script>
+</body>
+</html>

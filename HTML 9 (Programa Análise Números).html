@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programa Análise Números
+</title>
+</head>
+<body>
+<script type="text/javascript">
+
+// inicialização
+
+var a=0;
+var b=0;
+var c=0;
+var par=0;
+var impar=0;
+var min=0;
+var max=0;
+var linebreak = "<br />";
+
+// leitura dos três números
+
+a = parseInt(prompt("Qual o primeiro número?", "Digite o primeiro número."));
+b = parseInt(prompt("Qual o segundo número?", "Digite o segundo número."));
+c = parseInt(prompt("Qual o terceiro número?", "Digite o terceiro número."));
+
+// verificação par ou ímpar
+
+if (parseInt(a % 2)==0) {
+    par += 1;
+} else {
+    impar += 1;
+}
+if (parseInt(b % 2)==0) {
+    par += 1;
+} else {
+    impar += 1;
+}
+if (parseInt(c % 2)==0) {
+    par += 1;
+} else {
+    impar += 1;
+}
+
+// determinação maior dos números
+
+if (a<b) {
+    if (a<c) {
+        min = a;
+        if (b>c) {
+            max = b;
+        } else {
+            max = c;
+        }
+    } else {
+        min = c;
+        max = b;
+    }
+} else {
+    if (a>c) {
+        max = a;
+        if (b>c) {
+            min = c;
+        } else {
+            min = b;
+        }
+    } else {
+        max = c;
+        min = b;
+    }
+}
+
+// escrita dos resultados
+
+if (a==b && b==c) {
+    document.write(par + " Número Par " + linebreak + impar + " Número Ímpar " + linebreak + max + " é o máximo " + linebreak + min + " é o mínimo" + linebreak + "Números iguais");
+    } else {
+        document.write(par + " Número Par " + linebreak + impar + " Número Ímpar " + linebreak + max + " é o máximo " + linebreak + min + " é o mínimo" + linebreak + "Números diferentes");
+}
+
+</script>
+</body>
+</html>
